@@ -15,6 +15,7 @@ jupyterlab = "^3.0.16"
 Fuzzy = "^1.2.2"
 pyphonetics = "^0.5.3"
 keyboard = "^0.13.5"
+PyAutoGUI = "^0.9.52"
 
 [tool.poetry.dev-dependencies]
 

@@ -1,0 +1,2 @@
+(asctime)s, (name)s, (levelname)-8s [(filename)s:(lineno)d] (message)s, __main__, INFO     [screen.py:9] Screen size '1120 x 1792'
+(asctime)s, (name)s, (levelname)-8s [(filename)s:(lineno)d] (message)s, __main__, INFO     [screen.py:47] Moving to cell '(5,3)'

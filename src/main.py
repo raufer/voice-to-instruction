@@ -1,11 +1,9 @@
 import sys
 sys.path.append('/Users/raulferreira/p01/voice-to-label')
 
-import src
 import logging
 
 import keyboard
-import speech_recognition as sr
 
 from typing import List
 
@@ -14,6 +12,7 @@ from src.core.resources import initialize_resources
 from src.ops.phonetic import phonetically_closest
 from src.utils.files import parse_labels
 from src.constants import PRESS_TO_SPEAK
+from src.ops.screen import label_selection
 
 logger = logging.getLogger(__name__)
 
@@ -39,10 +38,13 @@ def main(instruction_set: List[str], backend: str, duration: int, press_to_speak
         keyboard.wait(press_to_speak)
 
         transcription = recognize(microphone, recognizer, backend=backend, timeout=duration, phrase_time_limit=duration)
+
         if transcription:
             min_ = phonetically_closest(instruction_set, transcription)
             closest = instruction_set[min_]
             logger.info(f"> ASR: '{closest}'")
+
+            label_selection(min_)
 
 
 if __name__ == '__main__':

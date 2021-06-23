@@ -16,7 +16,7 @@ console_format ='%(asctime)s, %(name)s, %(levelname)-8s [%(filename)s:%(lineno)d
 logging.basicConfig(
     format=file_format,
     datefmt=console_format,
-    level=logging.INFO,
+    level=logging.DEBUG,
     filename='training-job.log',
     filemode='w'
 )
