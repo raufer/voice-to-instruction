@@ -1,0 +1,13 @@
+
+class config:
+    BATCH_SIZE = 128
+    GAMMA = 0.999
+    EPS_START = 0.9
+    EPS_END = 0.01
+    EPS_DECAY = 200
+    TARGET_UPDATE = 10
+    MEMORY_SIZE = 100000
+    NUM_EPISODES = 50000
+    FRAMES = 2
+    GRAYSCALE = True
+    RESIZE_PIXELS = 40
