@@ -3,7 +3,7 @@
 Simple script to go from voice to instruction:
 
     1. Waits for a "listen" instruction (pressing of a certain key)
-    2. Speech to text process
+    2. Runs a speech to text process
     3. Searches the most likely instruction amid an instruction set, given a phonetic similarity criterion
 
 
